@@ -43,14 +43,12 @@ def logout(id):
     # session清空
     if ms.username == session['username']:
         session.pop('username', None)
-
     return redirect(url_for('message.index'))
 
 
 @main.route('/register', methods=['POST', 'GET'])
 def register():
     error = " "
-
     if request.method == 'POST':
         form = request.form
         u = User(form)

@@ -85,3 +85,4 @@ if __name__ == '__main__':
     configure_manager()
     configured_app()
     manager.run()
+

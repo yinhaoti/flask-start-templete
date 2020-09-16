@@ -3,6 +3,8 @@
 import sys, os
 from os.path import abspath
 from os.path import dirname
+import app
+
 
 # 获取当前工作路径
 workDir = os.getcwd()
@@ -10,7 +12,7 @@ print('启动目录为: ', workDir)
 os.chdir(abspath(dirname(__file__)))
 print('修改当前工作目录为: ', os.getcwd())
 
-import app
+
 
 sys.path.insert(0, abspath(dirname(__file__)))
 

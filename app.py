@@ -75,7 +75,7 @@ def server():
     app = configured_app()
     config = dict(
         debug=True,
-        host='0.0.0.0',
+        host='localhost',
         port=3000,
     )
     app.run(**config)

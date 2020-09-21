@@ -1,7 +1,7 @@
 import time
 
-from . import ModelMixin
-from . import db
+from models import ModelMixin
+from models import db
 
 
 class Todo(db.Model, ModelMixin):
@@ -23,3 +23,10 @@ class Todo(db.Model, ModelMixin):
     def update(self, form):
         self.task = form.get('task', '')
         self.save()
+
+if __name__ == "__main__":
+    form = {
+        'task': 'temp',
+    }
+    re = Todo(form)
+    print(re)
